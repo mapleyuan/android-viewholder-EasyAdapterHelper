@@ -9,14 +9,13 @@ Usage
 
 >you can quickly use like this:
 
-<code>
-  listView.setAdapter(new EasyAdapter<String, BaseViewHolderHelper>(getApplicationContext(), R.layout.listview_item, datas) {
+<pre><code>listView.setAdapter(new EasyAdapter<String, BaseViewHolderHelper>(getApplicationContext(), R.layout.listview_item, datas) {
    @Override
-            public void convert(BaseViewHolderHelper viewHolderHelper, String data) {
-                  viewHolderHelper.setTextView(R.id.textView, data);
-             }
-          });
-</code>
+           public void convert(BaseViewHolderHelper viewHolderHelper, String data) {
+                 viewHolderHelper.setTextView(R.id.textView, data);
+            }
+         });
+</code></pre>
 
 Developed By
 -------------
