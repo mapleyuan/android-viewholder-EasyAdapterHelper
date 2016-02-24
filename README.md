@@ -17,9 +17,7 @@ Usage
 </code></pre>
 
 >you can also implement EasyAdapter,like this:
- <pre><code>
- 
- public class ChatViewAdapter extends EasyAdapter<ChatViewAdapter.MessageModle, BaseViewHolderHelper> {
+ <pre><code> public class ChatViewAdapter extends EasyAdapter<ChatViewAdapter.MessageModle, BaseViewHolderHelper> {
 
     public ChatViewAdapter(Context context, List<MessageModle> datas) {
         super(context, datas, new EasyAdapter.IMultiItem<MessageModle>() {
