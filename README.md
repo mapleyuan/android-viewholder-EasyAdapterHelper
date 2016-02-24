@@ -57,7 +57,7 @@ Usage
         public static final int MESSAGE_TYPE_ATTACHMENT = 2;
         boolean mIsFrom;
         /**
-         * 内容类型，详见{@link #MESSAGE_TYPE_TEXT}
+         * @see {@link #MESSAGE_TYPE_TEXT}
          */
         int mType;
         public String mContent;
