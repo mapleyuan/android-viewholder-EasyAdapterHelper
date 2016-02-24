@@ -6,7 +6,7 @@ focus on model and you do not need to focus recycle view.
 Usage
 ------------
 
->you can quickly use like this:
+1.you can quickly use like this:
 
 <pre><code>listView.setAdapter(new EasyAdapter<String, BaseViewHolderHelper>(getApplicationContext(), R.layout.listview_item, datas) {
    @Override
@@ -16,7 +16,7 @@ Usage
          });
 </code></pre>
 
->you can also implement EasyAdapter,like this:
+2.you can also implement EasyAdapter,like this:
  <pre><code> public class ChatViewAdapter extends EasyAdapter<ChatViewAdapter.MessageModle, BaseViewHolderHelper> {
 
     public ChatViewAdapter(Context context, List<MessageModle> datas) {
