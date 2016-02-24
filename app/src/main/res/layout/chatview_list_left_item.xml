@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="#ebebeb">
+
+    <ImageView
+        android:id="@+id/chatplane_chatview_avar_id"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/kadaishan" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/chatplane_chatview_avar_id"
+        android:layout_alignTop="@+id/chatplane_chatview_avar_id"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/chatview_left_item_bg"
+        >
+
+        <TextView
+            android:id="@+id/chatview_maincontent_text_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Hey,that is cool man!"
+            android:paddingBottom="15dp"
+            android:paddingLeft="14dp"
+            android:paddingTop="15dp"
+            android:paddingRight="14dp"
+            android:layout_centerInParent="true"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            />
+        <ImageView
+            android:id="@+id/chatview_maincontent_image_id"
+            android:layout_width="154dp"
+            android:layout_height="121dp"
+            android:src="@drawable/kadaishan"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

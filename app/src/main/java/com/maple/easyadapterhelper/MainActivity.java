@@ -28,27 +28,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         ListView listView = (ListView) findViewById(R.id.listview_id);
-        List<String> datas = new ArrayList<>();
-        String sb = "sb";
+        List<ChatViewAdapter.MessageModle> datas = new ArrayList<>();
+        String sb = "hey";
         for (int i = 0; i < 100; i++) {
-            datas.add(sb + i);
+            ChatViewAdapter.MessageModle messageModle = new ChatViewAdapter.MessageModle(i % 3 == 0, i % 2 == 0 ? ChatViewAdapter.MessageModle.MESSAGE_TYPE_TEXT : ChatViewAdapter.MessageModle.MESSAGE_TYPE_ATTACHMENT, sb);
+            datas.add(messageModle);
         }
-        listView.setAdapter(new EasyAdapter<String, BaseViewHolderHelper>(getApplicationContext(), R.layout.listview_item, datas) {
-            @Override
-            public void convert(BaseViewHolderHelper viewHolderHelper, String data) {
-                viewHolderHelper.setTextView(R.id.textView, data);
-            }
-        });
+        listView.setAdapter(new ChatViewAdapter(getApplicationContext(), datas));
     }
 
     @Override
